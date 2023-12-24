@@ -38,10 +38,10 @@ To run this project locally, follow these steps:
 
 ## Screenshots
 
-(![go termainl](https://github.com/brucesailes/taskmanager-foryourmom/assets/110871245/b323538a-2b50-4dfc-9d5c-ae44259b6988)
-)
-(![htmx go web](https://github.com/brucesailes/taskmanager-foryourmom/assets/110871245/92d6a1b0-9eee-4b14-9620-98d3afbd1d2a)
-)
+![go termainl](https://github.com/brucesailes/taskmanager-foryourmom/assets/110871245/b323538a-2b50-4dfc-9d5c-ae44259b6988)
+
+![htmx go web](https://github.com/brucesailes/taskmanager-foryourmom/assets/110871245/92d6a1b0-9eee-4b14-9620-98d3afbd1d2a)
+
 
 ## Contributing
 
