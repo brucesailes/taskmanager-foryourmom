@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmx Task Manager</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.7.0/dist/htmx.js"></script> 
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <form id="taskForm" hx-post="/add-task" hx-target="#tasks" hx-swap="none">
+        <input type="text" id="taskInput" name="task" placeholder="Enter task...">
+        <button type="submit">Add Task</button>
+    </form>
+    <div id="tasks">
+        <!-- Tasks will be displayed here -->
+        {{ range . }}
+            <div>{{ . }}</div>
+        {{ end }}
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('taskForm').addEventListener('htmx:afterRequest', function(event) {
+                console.log("Form submitted"); // Check if this log appears in the console
+                const taskInput = document.getElementById('taskInput');
+                if (taskInput) {
+                    taskInput.value = ''; // Clear the input field after adding a task
+                    taskInput.focus(); // Focus back on the input field for the next task
+                } else {
+                    console.error("Task input element not found");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
